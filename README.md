@@ -5,7 +5,7 @@ Supports GOST ciphers and up to TLSv1.2
 
 ## Build
 ```
-git clone https://github.com/vheathen/docker-nginx-openssl3-gost.git
+git clone https://github.com/STR470S/docker-nginx-openssl3-gost.git
 cd docker-nginx-openssl3-gost
 docker build nginx-openssl3-gost --tag nginx-openssl3-gost
 ```
