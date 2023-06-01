@@ -1,6 +1,6 @@
 FROM debian:stable-slim
 
-ARG NGINX_VERSION=1.23.2
+ARG NGINX_VERSION=1.25.0
 ARG OPENSSL_VERSION=3.1.1
 
 RUN apt-get update \
