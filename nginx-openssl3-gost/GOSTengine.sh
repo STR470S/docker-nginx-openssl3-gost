@@ -66,7 +66,7 @@ sed -i 's|--prefix=$ngx_prefix no-shared|--prefix=$ngx_prefix|' auto/lib/openssl
     --with-stream_ssl_module \
     --with-stream_ssl_preread_module \
     --with-openssl="/usr/local/src/openssl-${OPENSSL_VERSION}"
-make
+make -j
 make install
 
 # Add OpenSSL library path and update ldconfig
@@ -91,7 +91,7 @@ cmake -DCMAKE_BUILD_TYPE=Release \
     -DOPENSSL_INCLUDE_DIR="${OPENSSL_DIR}/include" \
     -DOPENSSL_LIBRARIES="${OPENSSL_DIR}/lib" \
     -DOPENSSL_ENGINES_DIR="${OPENSSL_DIR}/lib/engines-3" ..
-make
+make -j
 make install
 cp ./bin/gost.so "${OPENSSL_DIR}/lib/engines-3"
 cp -r "${OPENSSL_DIR}/lib/engines-3" /usr/lib/x86_64-linux-gnu/
