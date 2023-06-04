@@ -34,7 +34,7 @@ function handle_error {
 
 {
     apt update -qq || handle_error "Failed to update packages"
-    apt install -y wget git build-essential libpcre++-dev libz-dev ca-certificates cmake ufw || handle_error "Failed to install necessary packages"
+    apt install -y wget git curl build-essential libpcre++-dev libz-dev ca-certificates cmake ufw || handle_error "Failed to install necessary packages"
 
     # Update package list and install required packages
 
