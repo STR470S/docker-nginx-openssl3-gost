@@ -5,6 +5,12 @@ exec 2>> ./errors_gost.log
 
 # Log errors to a file called "errors_gost.log"
 
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LC_CTYPE=UTF-8
+export LANG=en_US.UTF-8
+#Get rid of the locale warning
+
 readonly NGINX_VERSION=1.25.0
 readonly OPENSSL_VERSION=3.1.1
 readonly GOST_ENGINE_VERSION=3.0.1
