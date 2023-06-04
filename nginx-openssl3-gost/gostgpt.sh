@@ -22,8 +22,8 @@ function handle_error {
 # Define a function to handle errors, which logs the error message and code to the error log file
 
 {
-    apt-get update -qq || handle_error "Failed to update packages"
-    apt-get install -y wget git build-essential libpcre++-dev libz-dev ca-certificates cmake ufw || handle_error "Failed to install necessary packages"
+    apt update -qq || handle_error "Failed to update packages"
+    apt install -y wget git build-essential libpcre++-dev libz-dev ca-certificates cmake ufw || handle_error "Failed to install necessary packages"
 
     # Update package list and install required packages
 
